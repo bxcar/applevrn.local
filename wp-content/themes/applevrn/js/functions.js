@@ -1,22 +1,22 @@
-$(function(){
-	$.fn.wait = function(time, type) {
+jQuery(function(){
+	jQuery.fn.wait = function(time, type) {
 		time = time || 1000;
 		type = type || "fx";
 		return this.queue(type, function() {
 			var self = this;
 			setTimeout(function() {
-				$(self).dequeue();
+				jQuery(self).dequeue();
 			}, time);
 		});
 	};
     
-	if($(".b-item-cont").length){
-		var _b = $(".b-item-cont"),
+	if(jQuery(".b-item-cont").length){
+		var _b = jQuery(".b-item-cont"),
 			images = _b.find(".view-wrap .item"),
 			pointer = _b.find(".view-list-pointer");
 		
 		_b.find(".view-list .imglink").click(function(){
-			var _li = $(this).parent(),
+			var _li = jQuery(this).parent(),
 				oldImg = images.filter(":visible"),
 				newIndex = _li.index();
 			
@@ -34,7 +34,7 @@ $(function(){
 		});
 		
 		_b.find(".buy .b-bigbtn").click(function(){
-			$(this).addClass("inactive").unbind("click");
+			jQuery(this).addClass("inactive").unbind("click");
 			
 			_b.find(".order").show(250, function(){
 				_b.find(".order input:visible").eq(0).focus();
@@ -51,7 +51,7 @@ $(function(){
 				
 				obj.wait(1)
 					.animate({"opacity": 0.1},s, function(){
-						$(this).addClass("notfilled")
+						jQuery(this).addClass("notfilled")
 					})
 					.wait(1)
 					.animate({"opacity": 1},s)
@@ -65,15 +65,15 @@ $(function(){
 					.animate({"opacity": 1},s);
 			}
 			
-			$(this).find("input[type=text]").each(function(){
-				if(!$(this).val()){
-					blinking($(this).parent());
+			jQuery(this).find("input[type=text]").each(function(){
+				if(!jQuery(this).val()){
+					blinking(jQuery(this).parent());
 					stop = true;
 				}
 				
-				if(/\[email\]/.test($(this).attr('name'))){
-					if(!(/.+@.+\..+/.test($(this).val()))){
-						blinking($(this).parent());
+				if(/\[email\]/.test(jQuery(this).attr('name'))){
+					if(!(/.+@.+\..+/.test(jQuery(this).val()))){
+						blinking(jQuery(this).parent());
 						stop = true;
 					}
 				}
@@ -82,8 +82,8 @@ $(function(){
 			if(stop) return false;
 		});
 		
-		$("input").focusin(function(){
-			$(this).parent().removeClass("notfilled");
+		jQuery("input").focusin(function(){
+			jQuery(this).parent().removeClass("notfilled");
 		});
 	}
 });

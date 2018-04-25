@@ -36,78 +36,80 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="l-container-wrap l-base">
-    <div class="l-container g-line">
-        <div class="b-head">
-            <div class="b-head-outer">
-                <div class="b-head-inner">
-                    <h1 class="b-logo">Applevrn.ru</h1>
-                    <div class="b-head-phone">+7 (473) 238-08-70</div>
-                    <ul class="b-advmenu">
-                        <li class="item"><a href="/dostavka_i_oplata/">Доставка и оплата</a></li>
-                        <li class="item"><a href="/servis/">Сервис</a></li>
-                        <li class="item"><a href="/tradein/">Trade-in</a></li>
+<div class="b-head">
+    <div class="b-head-outer">
+        <div class="b-head-inner">
+            <div class="b-head-inner-wrap">
+                <a href="<?= home_url(); ?>"><h1 class="b-logo">Applevrn.ru</h1></a>
+                <div class="b-head-phone">+7 (473) 238-08-70</div>
+                <ul class="b-advmenu">
+                    <li class="item"><a href="/shipping-and-payment/">Доставка и оплата</a></li>
+                    <li class="item"><a href="/service/">Сервис</a></li>
+                    <li class="item"><a href="/trade-in/">Trade-in</a></li>
 
-                    </ul>
+                </ul>
 
-                    <ul class="b-head-catalog">
-                        <li class="item">
-                            <a href="/katalog/iphone/" class="link">
-                                <div class="outer">
-                                    <div class="inner">
-                                        <table>
-                                            <tr>
-                                                <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-iphone.png"> <span class="tlink"><span>iPhone</span></span>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                <ul class="b-head-catalog">
+                    <li class="item">
+                        <a href="/katalog/iphone/" class="link">
+                            <div class="outer">
+                                <div class="inner">
+                                    <table>
+                                        <tr>
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-iphone.png"> <span class="tlink"><span>iPhone</span></span>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="/katalog/ipad/" class="link">
-                                <div class="outer">
-                                    <div class="inner">
-                                        <table>
-                                            <tr>
-                                                <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipad.png"> <span
-                                                            class="tlink"><span>iPad</span></span></td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/katalog/ipad/" class="link">
+                            <div class="outer">
+                                <div class="inner">
+                                    <table>
+                                        <tr>
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipad.png"> <span
+                                                        class="tlink"><span>iPad</span></span></td>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="/katalog/mac/" class="link">
-                                <div class="outer">
-                                    <div class="inner">
-                                        <table>
-                                            <tr>
-                                                <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-mac.png"> <span
-                                                            class="tlink"><span>Mac</span></span></td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/katalog/mac/" class="link">
+                            <div class="outer">
+                                <div class="inner">
+                                    <table>
+                                        <tr>
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-mac.png"> <span
+                                                        class="tlink"><span>Mac</span></span></td>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a href="/katalog/ipod/" class="link">
-                                <div class="outer">
-                                    <div class="inner">
-                                        <table>
-                                            <tr>
-                                                <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipod.png"> <span
-                                                            class="tlink"><span>iPod/Watch</span></span></td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/katalog/ipod/" class="link">
+                            <div class="outer">
+                                <div class="inner">
+                                    <table>
+                                        <tr>
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipod.png"> <span
+                                                        class="tlink"><span>iPod/Watch</span></span></td>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </div>
+</div>
+<div class="l-container-wrap l-base">
+    <div class="l-container g-line">

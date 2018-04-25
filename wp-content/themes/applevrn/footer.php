@@ -20,9 +20,9 @@
                             <td class="copy">&copy; Applevrn.ru, 2012&ndash;2018</td>
                             <td class="menu">
                                 <ul class="b-advmenu">
-                                    <li class="item"><a href="/dostavka_i_oplata/">Доставка и оплата</a></li>
-                                    <li class="item"><a href="/servis/">Сервис</a></li>
-                                    <li class="item"><a href="/tradein/">Trade-in</a></li>
+                                    <li class="item"><a href="/shipping-and-payment/">Доставка и оплата</a></li>
+                                    <li class="item"><a href="/service/">Сервис</a></li>
+                                    <li class="item"><a href="/trade-in/">Trade-in</a></li>
 
                                 </ul>
 

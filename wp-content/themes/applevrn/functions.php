@@ -162,4 +162,3 @@ add_action( 'wp_enqueue_scripts', 'applevrn_scripts' );
 // if ( defined( 'JETPACK__VERSION' ) ) {
 	// require get_template_directory() . '/inc/jetpack.php';
 // }
-

@@ -50,13 +50,13 @@
                 </ul>
 
                 <ul class="b-head-catalog">
-                    <li class="item">
-                        <a href="/katalog/iphone/" class="link">
+                    <li class="item <?php if(is_product_category( 'iphone' )) { echo 'active'; } ?>">
+                        <a href="/product-category/catalog/iphone/" class="link">
                             <div class="outer">
                                 <div class="inner">
                                     <table>
                                         <tr>
-                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-iphone.png"> <span class="tlink"><span>iPhone</span></span>
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-iphone<?php if(is_product_category( 'iphone' )) { echo '-active'; } ?>.png"> <span class="tlink"><span>iPhone</span></span>
                                             </td>
                                         </tr>
                                     </table>
@@ -64,13 +64,13 @@
                             </div>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="/katalog/ipad/" class="link">
+                    <li class="item <?php if(is_product_category( 'ipad' )) { echo 'active'; } ?>">
+                        <a href="/product-category/catalog/ipad/" class="link">
                             <div class="outer">
                                 <div class="inner">
                                     <table>
                                         <tr>
-                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipad.png"> <span
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipad<?php if(is_product_category( 'ipad' )) { echo '-active'; } ?>.png"> <span
                                                         class="tlink"><span>iPad</span></span></td>
                                         </tr>
                                     </table>
@@ -78,13 +78,13 @@
                             </div>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="/katalog/mac/" class="link">
+                    <li class="item <?php if(is_product_category( 'mac' )) { echo 'active'; } ?>">
+                        <a href="/product-category/catalog/mac/" class="link">
                             <div class="outer">
                                 <div class="inner">
                                     <table>
                                         <tr>
-                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-mac.png"> <span
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-mac<?php if(is_product_category( 'mac' )) { echo '-active'; } ?>.png"> <span
                                                         class="tlink"><span>Mac</span></span></td>
                                         </tr>
                                     </table>
@@ -92,13 +92,13 @@
                             </div>
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="/katalog/ipod/" class="link">
+                    <li class="item <?php if(is_product_category( 'ipod' )) { echo 'active'; } ?>">
+                        <a href="/product-category/catalog/ipod/" class="link">
                             <div class="outer">
                                 <div class="inner">
                                     <table>
                                         <tr>
-                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipod.png"> <span
+                                            <td class="cont"><img src="<?=get_template_directory_uri(); ?>/images/cat-ipod<?php if(is_product_category( 'ipod' )) { echo '-active'; } ?>.png"> <span
                                                         class="tlink"><span>iPod/Watch</span></span></td>
                                         </tr>
                                     </table>

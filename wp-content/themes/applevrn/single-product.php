@@ -74,8 +74,7 @@ global $product; ?>
                                     <table>
                                         <tr>
                                             <td>
-                                                <img src="<?= wp_get_attachment_url( $image_ids ); ?>"
-                                                     width="80" height="74"></td>
+                                                <img style="max-width: 80%; max-height: 75%;" src="<?= wp_get_attachment_url( $image_ids ); ?>"></td>
                                         </tr>
                                     </table>
                                 </div>

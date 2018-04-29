@@ -686,3 +686,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }*/
+
+.b-catalog {
+	display: flex;
+	flex-wrap: wrap;
+}

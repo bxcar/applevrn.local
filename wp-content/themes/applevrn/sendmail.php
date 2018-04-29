@@ -29,7 +29,7 @@ $msg .= "</body></html>";
 
 if (!empty($phone)) {
 //     отправка сообщения
-    if (mail('malanchukdima@mail.ru', $subject, $msg, $headers)) { ?>
+    if (mail(get_field('email'), $subject, $msg, $headers)) { ?>
         <div class="b-default">
             <h1 umi:element-id="4" umi:field-name="h1"><?php the_title(); ?></h1>
             <div class="b-content" umi:element-id="4" umi:field-name="content">

@@ -647,3 +647,42 @@ span.rur span:before{
 body {
 	background-color: #fbfbfb;
 }
+
+.b-foot .copy,
+.b-foot .menu,
+.b-foot .phone {
+	width: 33.33333%;
+}
+
+.b-foot .menu {
+	text-align: center;
+}
+
+.b-foot .phone {
+	text-align: right;
+}
+
+
+.l-footer {
+	width: 100%;
+}
+
+.b-foot {
+	padding-left: 0;
+}
+
+.b-foot-outer {
+	padding-right: 0;
+}
+
+.b-foot-inner table {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*
+.b-foot-cont {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}*/

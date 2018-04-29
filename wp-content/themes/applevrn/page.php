@@ -15,7 +15,7 @@
 get_header();
 ?>
     <div class="b-main-banner">
-        <a href="/product/iphone-x/"><img src="<?=get_template_directory_uri(); ?>/images/cms/data/iphone/iPhone_X/111111111111.png"></a>
+        <a target="<?= get_field('banner_link')['target'];?>" href="<?= get_field('banner_link')['url'];?>"><img src="<?php the_field('banner_img');?>"></a>
     </div>
 
     <div class="g-clear-both"></div>
@@ -1731,61 +1731,22 @@ get_header();
                 <div class="buy"><a class="b-buybtn" href="#/katalog/iphone/iphone_6s_16_gb_gold/">Купить</a></div>
             </div>
         </div><!-- next
-
-
 --></div>
 
 
     <div class="b-main">
         <div class="col">
-            <h2 class="likeh1" umi:element-id="1" umi:field-name="h1">Почему Applevrn?</h2>
+            <h2 class="likeh1" umi:element-id="1" umi:field-name="h1"><?php the_field('bottom_left_title');?></h2>
             <div class="b-content" umi:element-id="1" umi:field-name="content">
                 <p><strong><br/></strong></p>
-                <p><strong>Applevrn</strong> отличает от конкурентов в первую очередь то, что мы работаем с дистрибьюторами,
-                    в том числе и непосредственно с www.apple.com/de/ &mdash; это значит, что покупая у нас , у вас всегда
-                    будет официальная европейская гарантия, и одновременно российская. Любой заводской брак подразумевает
-                    замену устройства на новое в течении года<strong> с момента активации, при условии соблюдения правил
-                        эксплуатации.&nbsp;</strong>Любое устройство, которое вы хотите приобрести у нас, всегда можно
-                    проверить на предмет предыдущей активации.&nbsp;</p>
-                <p>В Applevrn вы всегда можете обменять свой старый телефон, планшет или ноутбук на новый по программе
-                    <strong>trade-in</strong>, а также мы предоставляем услуги по ремонту негарантийного характера.&nbsp;&nbsp;<strong>Даже
-                        если вы не нашли то, что искали, то вы всегда это можете заказать-просто позвоните нам!!!</strong>
-                </p>
-                <p>И все это в <strong>Applevrn</strong> и самое главное по наиболее <strong>выгодным и интересным
-                        ценам!</strong></p>
-                <p><strong>Сайт носит сугубо информационный характер и не является публичной офертой, определяемой Статьей
-                        437/2 ГК РФ.<br/>&nbsp;</strong></p>
-                <p><strong>Наша страница в контакте&nbsp;http://vk.com/applevrnru&nbsp;</strong></p>
-                <p>&nbsp;</p>
-                <p><strong>&nbsp;</strong></p>
+                <?php the_field('bottom_left_desc');?>
+                <p><strong><br/></strong></p>
             </div>
         </div>
         <div class="col">
-            <h2 class="likeh1" umi:element-id="12" umi:field-name="h1">Отзывы наших клиентов</h2>
+            <h2 class="likeh1" umi:element-id="12" umi:field-name="h1"><?php the_field('bottom_right_title');?></h2>
             <dl class="b-reviews">
-                <dt>Александр</dt>
-                <dd><p>Приобрел сегодня iPhone, все отлично. Хороший человек, ответственный, приятный в общении. Доставил
-                        телефон можно сказать прямо к дому. Радует оперативность ответов на мои вопросы и активность в принципе.
-                        Сначала сомневался, как оказалось зря. Удачи тебе Данила, следующие покупки только у Вас. Кстати,
-                        понравился экран, ничего не желтит, хорошие отчетливые и яркие цвета.</p></dd>
-                <dt>Лев</dt>
-                <dd>
-                    <table id="post21293203" class="tborder" border="0" cellspacing="0" cellpadding="6" width="100%"
-                           align="center">
-                        <tbody>
-                        <tr valign="top">
-                            <td id="td_post_21293203" class="alt1">
-                                <div id="post_message_21293203">Хочу поблагодарить Applevrn за быстрое и качественное
-                                    решение проблемы с iPad по гарантии. Немного подождал и получил новый!
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <p><br/><br/></p></dd>
-                <dt>Алексей</dt>
-                <dd><p><span>Хочу поблагодарить &nbsp;Applevrn за разрешение гарантийной ситуации с приобретенным айпадом. Хотя и пришлось &nbsp;пару недель ждать, но в результате получил новое устройство взамен, и все это без лишних вопросов и формальностей.</span><br/><span>Так и надо работать.</span><br/><span>Спасибо.</span>
-                    </p></dd>
+                <?php the_field('bottom_right_desc');?>
             </dl>
         </div>
     </div>

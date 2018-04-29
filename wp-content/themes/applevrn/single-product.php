@@ -26,7 +26,7 @@ global $product; ?>
             <div class="order">
                 <form action="/order/" method="post">
                     <input type="hidden" name="act" value="send">
-                    <input type="hidden" name="page" value="<?= get_the_ID(); ?>">
+                    <input type="hidden" name="page" value="<?php the_permalink(); ?>">
                     <table class="order-form">
                         <tr>
                             <td>Ваше имя</td>
@@ -40,7 +40,7 @@ global $product; ?>
                         <tr>
                             <td>Номер телефона</td>
                             <td class="inp">
-                                <div class="b-input"><input type="text" name="data_phone"></div>
+                                <div class="b-input"><input required type="text" name="data_phone"></div>
                             </td>
                         </tr>
                     </table>

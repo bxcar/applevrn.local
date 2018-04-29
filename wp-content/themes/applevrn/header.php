@@ -15,13 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=8">
-    <meta name="description"
-          content="Applevrn.ru - купить в Воронеже iPhone 7,iPhone 7 Plus,iPhone 6S,iPhone 6s Plus,iPhone SE,iPhone 6,iPhone 5S,iPad Air 2,ipad 2017,iPad mini 4,iPad Pro 9.7,iPad Pro 10.5,iPad Pro 12.9,MacBook 12,MacBook Pro,MacBook Air,Apple iMac,iPad,gray,gold,silver,rose">
-    <meta name="keywords"
-          content="Applevrn.ru - купить в Воронеже iPhone 8,iPhone 8 plus, iPhone X,10,ten, iPhone 7,iPhone 7 Plus,iPhone 6S,iPhone 6s Plus,iPhone SE,iPhone 6,iPhone 5S,iPad Air 2,ipad 2017,iPad mini 4,iPad Pro 9.7,iPad Pro 10.5,iPad Pro 12.9,MacBook 12,MacBook Pro,MacBook ">
-    <title>Applevrn.ru - купить в Воронеже iPhone 8,iPhone 8 plus, iPhone X,10,ten, iPhone 7,iPhone 7 Plus,iPhone
-        6S,iPhone 6s Plus,iPhone SE,iPhone 6,iPhone 5S,iPad Air 2,ipad 2017,iPad mini 4,iPad Pro 9.7,iPad Pro 10.5,iPad
-        Pro 12.9,MacBook 12,MacBook Pro,MacBook </title>
+    <title><?php the_title(); ?></title>
     <link rel="shortcut icon" href="/favicon.ico">
 <!--    <script type="text/javascript" src="/js/cross-domain.php"></script>-->
 
@@ -34,21 +28,28 @@
 
 <!--    <script src="/js/functions.js?v=2"></script>-->
     <?php wp_head(); ?>
+    <style>
+        .b-logo {
+            background: url(<?php the_field('header_logo', 'option')?>);
+        }
+    </style>
 </head>
 <body>
 <div class="b-head">
     <div class="b-head-outer">
         <div class="b-head-inner">
             <div class="b-head-inner-wrap">
-                <a href="<?= home_url(); ?>"><h1 class="b-logo">Applevrn.ru</h1></a>
-                <div class="b-head-phone">+7 (473) 238-08-70</div>
-                <ul class="b-advmenu">
-                    <li class="item"><a href="/shipping-and-payment/">Доставка и оплата</a></li>
-                    <li class="item"><a href="/service/">Сервис</a></li>
-                    <li class="item"><a href="/trade-in/">Trade-in</a></li>
-
-                </ul>
-
+                <a href="<?= home_url(); ?>"><h1 class="b-logo"></h1></a>
+                <div class="b-head-phone"><?php the_field('header_phone', 'option'); ?></div>
+                <?php
+                echo str_replace(array('menu-item '), array('item '), wp_nav_menu(array(
+                        'echo' => false,
+                        'theme_location' => 'menu-1',
+                        'items_wrap' => '<ul class="b-advmenu">%3$s</ul>',
+                        'container' => 'false'
+                    ))
+                );
+                ?>
                 <ul class="b-head-catalog">
                     <li class="item <?php if(is_product_category( 'iphone' )) { echo 'active'; } ?>">
                         <a href="/product-category/catalog/iphone/" class="link">

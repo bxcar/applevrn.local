@@ -4,25 +4,11 @@
  */
 get_header(); ?>
 <div class="b-default">
-    <h1 umi:element-id="4" umi:field-name="h1">Trade-in</h1>
+    <h1 umi:element-id="4" umi:field-name="h1"><?php the_title(); ?></h1>
     <div class="b-content" umi:element-id="4" umi:field-name="content">
-        <p><span style="font-size: small;">Trade-in</span></p>
-        <p>Мы ценим время и деньги наших клиентов, поэтому в рамках программы Trade-in при покупке любого продукта в
-            нашем магазине, может быть принята в зачет стоимость вашего мобильного устройства.&nbsp;Вы избавляетесь от
-            забот о поиске покупателей на ваш девайс и проблем, связанных с его реализацией.&nbsp;</p>
-        <p>После проведения необходимого осмотра и диагностики вашего устройства, а также согласования цены, вы
-            выбираете товар, который хотели бы приобрести. Таким образом, мы экономим ваше время, деньги, а
-            главное-нервы.</p>
-        <p>Программа распространяется только на Apple. Кроме того, мы можем принять ваш девайс на комиссию по цене,
-            которую установите вы сами, и его продажей займутся профессионалы.</p>
-        <p>&nbsp;</p>
-        <p>Сейчас в наличии:</p>
-        <p>iPhone 6 16gb silver 10990</p>
-        <p>iPhone 7 Plus 128gb gold&nbsp;37990</p>
-        <p>iPhone 6s 64gb gold 18990</p>
-        <p>iPhone 6s 64gb space gray 18990</p>
-        <p>iPhone 6s 64gb rose gold 18990</p>
-        <p>ipad mini 16gb 4g silver 6500</p>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; endif; ?>
     </div>
 </div>
 

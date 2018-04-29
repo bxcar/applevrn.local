@@ -17,21 +17,23 @@
                 <div class="b-foot-inner">
                     <table>
                         <tr>
-                            <td class="copy">&copy; Applevrn.ru, 2012&ndash;2018</td>
+                            <td class="copy"><?php the_field('footer_copyright', 'option'); ?></td>
                             <td class="menu">
-                                <ul class="b-advmenu">
-                                    <li class="item"><a href="/shipping-and-payment/">Доставка и оплата</a></li>
-                                    <li class="item"><a href="/service/">Сервис</a></li>
-                                    <li class="item"><a href="/trade-in/">Trade-in</a></li>
-
-                                </ul>
-
+                                <?php
+                                echo str_replace(array('menu-item '), array('item '), wp_nav_menu(array(
+                                        'echo' => false,
+                                        'theme_location' => 'menu-1',
+                                        'items_wrap' => '<ul class="b-advmenu">%3$s</ul>',
+                                        'container' => 'false'
+                                    ))
+                                );
+                                ?>
                             </td>
-                            <td class="phone">+7 (473) 238-08-70</td>
-                            <td class="devs"><span class="devc"><span class="devd">Сайт сделан в </span><a
+                            <td class="phone"><?php the_field('footer_phone', 'option'); ?></td>
+
+                        </tr><!--  <td class="devs"><span class="devc"><span class="devd">Сайт сделан в </span><a
                                             title="Digital-агентство Red Collar" href="http://redcollar.ru/"><img
-                                                class="devi" src="<?=get_template_directory_uri(); ?>/images/redcollar.png"></a></span></td>
-                        </tr>
+                                                class="devi" src="<?php/*=get_template_directory_uri(); */?>/images/redcollar.png"></a></span></td>-->
                     </table>
                 </div>
             </div>
